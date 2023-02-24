@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from './components/Navigation/Navigation';
-import Logo from './Logo/logo';
+import Logo from './components/Navigation/Logo/logo';
 import './App.css';
 
 function App() {
