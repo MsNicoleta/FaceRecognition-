@@ -7,6 +7,9 @@ import Rank from './components/Rank/Rank';
 import './App.css';
 // import ParticlesOptions from './ParticlesOptions';
 
+const app = new Clarifai.App({
+  apiKey: 'b932a3c738a4e18a7eec11b756509e5'
+});
 
 class App extends Component {
   constructor() {
@@ -17,7 +20,10 @@ class App extends Component {
   }
   onInputChange = (event) => {
     console.log(event.target.value);
-}
+  }
+  onButtonSubmit = () => {
+   console.log('click');
+  }
 
     render(){
     return (
@@ -27,7 +33,9 @@ class App extends Component {
         <Navigation />
         <Logo />
         <Rank />
-        <ImageLinkForm onInputChange ={this.onInputChange}/>
+        <ImageLinkForm
+          onInputChange={this.onInputChange}
+          onButtonSubmit={this.onButtonSubmit} />
         {/* <FaceRecognition/> */}
       </div>
     );
